@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diego M. Tabarez - Portafolio</title>
+    <link rel="icon" type="image/png" href="/img/2.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4ba2068c42.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="contenedor">
+        <nav class="menu">
+          <a href="#acerca-de">Acerca de</a>
+          <a href="#trabajos">Trabajos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="contenedor-texto">
+          <div class="texto">
+            <h1 class="nombre">Diego M. Tabarez</h1>
+            <h2 class="profesion">Ingeniero de Software</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <section id="acerca-de" class="acerca-de">
+        <div class="contenedor">
+          <div class="foto">
+            <img
+              src="img/2.png"
+              alt="Diego M. Tabarez"
+              width="200"
+              height="200"
+            />
+          </div>
+
+          <div class="texto">
+            <h3 class="titulo">Sobre mí</h3>
+            <p>
+              <span class="bold">Técnico en Programación</span> por el Colegio
+              de Estudios Científicos y Tecnológicos del Estado de México,
+              <span class="bold">Ingeniero de Software</span> por la Universidad
+              Autónoma de Querétaro. Conocimientos de PHP, Java, MySQL, creación
+              de páginas web con distintas tecnologías y soporte técnico.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="trabajos">
+        <div class="contenedor">
+          <h3 id="trabajos" class="titulo">Trabajos</h3>
+          <div class="contenedor-trabajos">
+            <div class="trabajo">
+              <div class="thumb">
+                <img src="img/trabajos/1.png" alt="Trabajo 1" />
+              </div>
+              <div class="descripcion">
+                <p class="nombre">Sitio Web</p>
+                <p class="nombre-pag">Sociedad Bolivariana del Perú</p>
+                <p class="categoria">HTML / CSS / JavaScript / Bootstrap</p>
+              </div>
+            </div>
+            <div class="trabajo">
+              <div class="thumb">
+                <img src="img/trabajos/2.png" alt="Trabajo 1" />
+              </div>
+              <div class="descripcion">
+                <p class="nombre">Sitio Web</p>
+                <p class="nombre-pag">Multilingual System</p>
+                <p class="categoria">HTML / CSS / JavaScript / Bootstrap</p>
+              </div>
+            </div>
+            <div class="trabajo">
+              <div class="thumb">
+                <img src="img/trabajos/3.png" alt="Trabajo 1" />
+              </div>
+              <div class="descripcion">
+                <p class="nombre">Sitio Web</p>
+                <p class="nombre-pag">La46 - Pastelería</p>
+                <p class="categoria">HTML / CSS / JavaScript / Bootstrap</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer>
+      <section id="contacto" class="contacto">
+        <div class="contenedor">
+          <h3 class="titulo">Contacto</h3>
+          <form  action="https://formspree.io/f/xyylybwz" method="POST" class="formulario">
+            <input type="text" placeholder="Nombre" name="nombre" required />
+            <input type="email" placeholder="Correo" name="correo" required />
+            <input type="tel" placeholder="Teléfono:" name="telefono" required />
+            <textarea placeholder="Mensaje:" name="mensaje" required></textarea>
+            <input class="boton" type="submit" value="Enviar">
+          </form>
+        </div>
+      </section>
+
+      <section class="redes-sociales">
+        <div class="contenedor">
+          <a href="https://twitter.com/diegorkr" target="_blank" class="twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/Diegorkrr/"
+            target="_blank"
+            class="facebook"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/diego-martinez-8453981a7/"
+            target="_blank"
+            class="linkedin"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UCE7CFp25L9LE2Man-LtNl9A"
+            target="_blank"
+            class="youtube"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/diego_rkr/?hl=es-la"
+            target="_blank"
+            class="instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </section>
+      <span class="ir-arriba fas fa-arrow-alt-circle-up"> </span>
+      <script>
+        $(document).ready(function () {
+          $(".ir-arriba").click(function () {
+            $("body, html").animate(
+              {
+                scrollTop: "0px",
+              },
+              300
+            );
+          });
+
+          $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+              $(".ir-arriba").slideDown(300);
+            } else {
+              $(".ir-arriba").slideUp(300);
+            }
+          });
+        });
+      </script>
+    </footer>
+  </body>
+</html>
